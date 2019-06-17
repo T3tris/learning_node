@@ -5,6 +5,8 @@ const PORT = 3000;
 
 app.listen(PORT);
 
+app.use(express.static('first'));
+
 app.get('/public', (req, res, next) => {
     app.use(express.static('public'));
     console.log('the port is ', PORT);
